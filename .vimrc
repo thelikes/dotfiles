@@ -17,12 +17,12 @@ Plugin 'fatih/vim-go'
 Plugin 'spolu/dwm.vim.git'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'ctrlpvim/ctrlp.vim.git'
-"Plugin 'ervandew/supertab.git'
+Plugin 'ervandew/supertab.git'
 "Plugin 'garbas/vim-snipmate.git'
 "Plugin 'honza/vim-snippets.git'
 "Plugin 'MarcWeber/vim-addon-mw-utils.git'
 Plugin 'mileszs/ack.vim.git'
-"Plugin 'plasticboy/vim-markdown.git'
+Plugin 'plasticboy/vim-markdown.git'
 Plugin 'reedes/vim-lexical.git'
 Plugin 'scrooloose/syntastic.git'
 "Plugin 'terryma/vim-multiple-cursors.git'
@@ -97,7 +97,7 @@ set expandtab
 set autoindent
 
 " display
-set mouse=a
+"set mouse=a
 set history=2000
 set encoding=utf-8
 set scrolloff=3
@@ -144,9 +144,9 @@ nnoremap <leader>a :Ack
 "let g:html_indent_inctags = "html,body,head,tbody"
 "let g:html_indent_script1 = "inc"
 "let g:html_indent_style1 = "inc"
+"let javascript_enable_domhtmlcss=1
 
 " markdown
-"let javascript_enable_domhtmlcss=1
 "let g:vim_markdown_folding_disabled=1
 
 " vim lexical
