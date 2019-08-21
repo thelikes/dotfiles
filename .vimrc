@@ -56,6 +56,16 @@ endif
 " Transparent background
 hi Normal ctermbg=none
 hi NonText ctermbg=none
+
+" Override xoria and give the sybmols colors
+highlight GitGutterAdd    ctermfg=2
+highlight GitGutterChange ctermfg=3
+highlight GitGutterDelete ctermfg=1
+
+" Override xoria and set the column background transparent
+hi LineNr ctermbg=none
+" Override xoria and set the current line column number to the bright green
+hi CursorLineNr ctermfg=148 cterm=bold
 " ---
 
 " Airline config
