@@ -17,7 +17,7 @@ Plugin 'fatih/vim-go'
 Plugin 'spolu/dwm.vim.git'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'ctrlpvim/ctrlp.vim.git'
-"Plugin 'ervandew/supertab.git'
+Plugin 'ervandew/supertab.git'
 "Plugin 'garbas/vim-snipmate.git'
 "Plugin 'honza/vim-snippets.git'
 "Plugin 'MarcWeber/vim-addon-mw-utils.git'
@@ -25,7 +25,7 @@ Plugin 'mileszs/ack.vim.git'
 "Plugin 'plasticboy/vim-markdown.git'
 Plugin 'reedes/vim-lexical.git'
 Plugin 'scrooloose/syntastic.git'
-"Plugin 'terryma/vim-multiple-cursors.git'
+Plugin 'terryma/vim-multiple-cursors.git'
 "Plugin 'tomtom/tlib_vim.git'
 Plugin 'tpope/vim-surround.git'
 Plugin 'chrisbra/NrrwRgn.git'
@@ -158,3 +158,10 @@ augroup lexical
     autocmd FileType text call lexical#init({ 'spell': 0 })
 augroup END
 let g:lexical#spell = 1         " 0=disabled, 1=enabled
+
+" multiple cursors - remamp vim-multiple-cursors to not break dwm
+let g:multi_cursor_use_default_mapping=0
+let g:multi_cursor_next_key='<C-m>'
+let g:multi_cursor_prev_key='<C-p>'
+let g:multi_cursor_skip_key='<C-x>'
+let g:multi_cursor_quit_key='<Esc>'
