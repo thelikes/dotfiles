@@ -136,6 +136,7 @@ set formatoptions=qrn1
 
 " ack-grep
 nnoremap <leader>a :Ack
+nnoremap -c :%!
 
 " ---
 
