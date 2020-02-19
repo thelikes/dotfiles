@@ -14,7 +14,18 @@ printf $NORMAL
 ran_theme=$(ls ~/.oh-my-zsh/themes | sed 's/\.zsh-theme//g' | shuf -n 1)
 sed -i "s/robbyrussell/$ran_theme/g" ~/.zshrc
 
-echo "export TERM=xterm-256color\nalias lss='ls -ltr'\nalias s='git status'\nalias P='git pull origin master'\nalias p='git push origin master'\nalias ipa='ip --brief --color a'\nalias ips='sort -n -t . -k 1,1 -k 2,2 -k 3,3 -k 4,4 -u'" >> ~/.zshrc
+zshrc="~/.zshrc"
+
+echo "export TERM=xterm-256color" >> $zshrc
+echo "alias lss='ls -ltr'" >> $zshrc
+echo "alias s='git status'" >> $zshrc
+echo "alias P='git pull origin master'" >> $zshrc
+echo "alias p='git push origin master'" >> $zshrc
+echo "alias ipa='ip --brief --color a'" >> $zshrc
+echo "alias ips='sort -n -t . -k 1,1 -k 2,2 -k 3,3 -k 4,4 -u'" >> $zshrc
+echo "alias UA='Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36'" >> $zshrc
+echo "alias af='assetfinder -subs-only" >> $zshrc
+echo "alias fn='fuzznav'" >> $zshrc
 
 echo
 printf $GREEN
