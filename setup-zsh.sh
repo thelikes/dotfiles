@@ -14,7 +14,7 @@ printf $NORMAL
 ran_theme=$(ls ~/.oh-my-zsh/themes | sed 's/\.zsh-theme//g' | shuf -n 1)
 sed -i "s/robbyrussell/$ran_theme/g" ~/.zshrc
 
-zshrc="~/.zshrc"
+zshrc="$(echo $HOME)/.zshrc"
 
 # exports
 echo "export TERM=xterm-256color" >> $zshrc
