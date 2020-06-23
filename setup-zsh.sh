@@ -32,6 +32,7 @@ echo "alias fn='fuzznav'" >> $zshrc
 
 # ftns
 echo 'ipinfo () { curl ipinfo.io/$1 }' >> $zshrc
+echo "searchip () { searchip=$(echo $1 | sed 's/\./\\\./g')" >> $zshrc
 
 echo
 printf $GREEN
