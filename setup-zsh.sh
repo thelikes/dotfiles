@@ -29,10 +29,11 @@ echo "alias ipa='ip --brief --color a'" >> $zshrc
 echo "alias ips='sort -n -t . -k 1,1 -k 2,2 -k 3,3 -k 4,4 -u'" >> $zshrc
 echo "alias af='assetfinder -subs-only'" >> $zshrc
 echo "alias fn='fuzznav'" >> $zshrc
+echo "alias searchip=$(echo $1 | sed 's/\./\\\./g')" >> $zshrc
 
 # ftns
 echo 'ipinfo () { curl ipinfo.io/$1 }' >> $zshrc
-echo "searchip () { searchip=$(echo $1 | sed 's/\./\\\./g')" >> $zshrc
+echo 'weakpass () { curl http://weakpasswords.net/ }' >> $zshrc
 
 echo
 printf $GREEN
