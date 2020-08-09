@@ -19,6 +19,7 @@ zshrc="$(echo $HOME)/.zshrc"
 # exports
 echo "export TERM=xterm-256color" >> $zshrc
 echo "export UA='Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36'" >> $zshrc
+echo "export datestr='"$(date +%Y-%m-%d)"' >> $zshrc
 
 # aliases
 echo "alias lss='ls -ltr'" >> $zshrc
