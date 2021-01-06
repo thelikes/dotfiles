@@ -20,7 +20,7 @@ zshrc="$(echo $HOME)/.zshrc"
 echo "export TERM=xterm-256color" >> $zshrc
 echo "export UA='Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36'" >> $zshrc
 echo 'export datestr="$(date +%Y-%m-%d)"' >> $zshrc
-echo "export ff=\"ffuf -c -u \$targ/FUZZ -w \$list -o ffuf-\$(basename \$list)-\$(echo $targ | sed 's/:\/\//\./g' | sed 's/\//_/g').txt -t 10 -H \"User-Agent: \$UA\" -mc all -ac\"" >> $zshrc
+echo 'export ff="ffuf -c -u \$targ/FUZZ -w \$list -o ffuf-\$(basename \$list)-\$(echo \$targ | sed '"'s/:\/\//\./g' | sed 's/\//_/g').txt"' -t 10 -H \"User-Agent: \$UA\" -mc all -ac"' >> $zshrc
 
 # aliases
 echo "alias lss='ls -ltr'" >> $zshrc
@@ -34,7 +34,7 @@ echo "alias fn='fuzznav'" >> $zshrc
 echo "alias searchip=$(echo $1 | sed 's/\./\\\./g')" >> $zshrc
 
 # ftns
-echo 'ipinfo () { curl ipinfo.io/$1 | jq }' >> $zshrc
+echo 'ipinfo () { curl -s ipinfo.io/$1 | jq }' >> $zshrc
 echo 'weakpass () { curl http://weakpasswords.net/ }' >> $zshrc
 
 echo
