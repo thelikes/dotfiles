@@ -1,0 +1,25 @@
+# me
+exec_always feh --bg-scale /home/user/Pictures/pic.jpg
+exec_always compton -f
+exec_always vmware-user-suid-wrapper
+bindsym $mod+d exec rofi -show run
+bindsym $mod+p spectacle -g
+
+#############################
+### GAPPING CONFIGURATION ###
+#############################
+# from: https://bbs.archlinux.org/viewtopic.php?id=252775
+
+# This effectively disables the window title bars alltogether (enabling gaps/gapping)
+#for_window [class=".*"] border pixel 0
+
+gaps inner 8
+gaps outer -2
+
+# Smart gaps (gaps used if only more than one container on the workspace)
+#smart_gaps on
+
+# Smart borders (draw borders around container only if it is not the only container on this workspace)
+ 
+# on|no_gaps (on=always activate and no_gaps=only activate if the gap size to the edge of the screen is 0)
+smart_borders on
