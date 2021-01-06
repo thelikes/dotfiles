@@ -1,8 +1,9 @@
 # me
+# comment out the line "bindsym $mod+d exec dmenu_run"
+bindsym $mod+d exec rofi -show run
 exec_always feh --bg-scale /home/user/Pictures/pic.jpg
 exec_always compton -f
 exec_always vmware-user-suid-wrapper
-bindsym $mod+d exec rofi -show run
 bindsym $mod+p spectacle -g
 
 #############################
