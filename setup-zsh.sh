@@ -32,6 +32,8 @@ echo "alias ips='sort -n -t . -k 1,1 -k 2,2 -k 3,3 -k 4,4 -u'" >> $zshrc
 echo "alias af='assetfinder -subs-only'" >> $zshrc
 echo "alias fn='fuzznav'" >> $zshrc
 echo "alias searchip=$(echo $1 | sed 's/\./\\\./g')" >> $zshrc
+echo "alias lil='tr \'[:upper:]\' \'[:lower:]\'" >> $zshrc
+echo "alias wb64='echo -n $1 | iconv -f UTF8 -t UTF16LE | base64 -w 0 ; echo'
 
 # ftns
 echo 'ipinfo () { curl -s ipinfo.io/$1 | jq }' >> $zshrc
