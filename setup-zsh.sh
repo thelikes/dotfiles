@@ -38,6 +38,7 @@ echo "alias wb64='iconv -f UTF8 -t UTF16LE | base64 -w 0 ; echo'" >> $zshrc
 # ftns
 echo 'ipinfo () { curl -s ipinfo.io/$1 | jq }' >> $zshrc
 echo 'weakpass () { curl http://weakpasswords.net/ }' >> $zshrc
+echo 'preexec() {echo $(date -u +"%Y-%m-%d %H:%M:%S GMT"); echo " "}' >> $zshrc
 
 echo
 printf $GREEN
