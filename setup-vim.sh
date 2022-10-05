@@ -36,8 +36,8 @@ echo "[*] Installing vundle and configured plugins..."
 printf $NORMAL
 mkdir -p $dotfilesDir/.vim/bundle
 cd $dotfilesDir/.vim/bundle
-git clone git://github.com/VundleVim/Vundle.vim.git
-vim +PluginInstall +qall
+git clone https://github.com/VundleVim/Vundle.vim.git
+#vim +PluginInstall +qall
 
 echo 
 printf $GREEN
