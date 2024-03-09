@@ -23,7 +23,7 @@ Plugin 'ervandew/supertab.git'
 "Plugin 'MarcWeber/vim-addon-mw-utils.git'
 Plugin 'mileszs/ack.vim.git'
 "Plugin 'plasticboy/vim-markdown.git'
-Plugin 'reedes/vim-lexical.git'
+"Plugin 'reedes/vim-lexical.git'
 Plugin 'scrooloose/syntastic.git'
 Plugin 'terryma/vim-multiple-cursors.git'
 "Plugin 'tomtom/tlib_vim.git'
@@ -151,14 +151,14 @@ nnoremap -c :%!
 "let g:vim_markdown_folding_disabled=1
 
 " vim lexical
-filetype plugin on
-augroup lexical
-    autocmd!
-    autocmd FileType markdown,mkd call lexical#init()
-    autocmd FileType textile call lexical#init()
-    autocmd FileType text call lexical#init({ 'spell': 0 })
-augroup END
-let g:lexical#spell = 1         " 0=disabled, 1=enabled
+"filetype plugin on
+"augroup lexical
+"    autocmd!
+"    autocmd FileType markdown,mkd call lexical#init()
+"    autocmd FileType textile call lexical#init()
+"    autocmd FileType text call lexical#init({ 'spell': 0 })
+"augroup END
+"let g:lexical#spell = 1         " 0=disabled, 1=enabled
 
 " multiple cursors - remamp vim-multiple-cursors to not break dwm
 let g:multi_cursor_use_default_mapping=0

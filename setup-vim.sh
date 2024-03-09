@@ -1,53 +1,28 @@
 #!/bin/bash
 
-GREEN="\033[32m"
-RED="\033[31m"
-NORMAL="\033[0;39m"
+if [ -z "$HOME" ]; then
+    echo "\$HOME not set; aborting"
+    exit 1
+fi
 
-dotfilesDir=~
-
-printf $GREEN
-echo "[*] Initializing..."
-printf $NORMAL
-
-if [[ -d ~/.vim ]] ; then
-    printf $RED
+if [[ -d $HOME/.vim ]] ; then
     echo "[!] Directory ~/.vim exists. Aborting..."
-    printf $NORMAL
     exit 1
 fi
 
-if [[ -f ~/.vimrc ]] ; then
-    printf $RED
+if [[ -f $HOME/.vimrc ]] ; then
     echo "[!] File ~/.vimrc exists. Aborting..."
-    printf $NORMAL
     exit 1
 fi
 
-echo
-printf $GREEN
-echo "[*] Installing rc file..."
-printf $NORMAL
-cp .vimrc ~/.vimrc
+if ! which git >/dev/null; then
+    echo "[!] git not found; aborting..."
+    exit 1
+fi
 
-echo
-printf $GREEN
-echo "[*] Installing vundle and configured plugins..."
-printf $NORMAL
-mkdir -p $dotfilesDir/.vim/bundle
-cd $dotfilesDir/.vim/bundle
-git clone https://github.com/VundleVim/Vundle.vim.git
-#vim +PluginInstall +qall
-
-echo 
-printf $GREEN
-echo "[!] Install ack !"
-echo "      \`apt install ack-grep\`"
-printf $NORMAL
-
-echo
-printf $GREEN
-echo "[*] Setup completed..."
-printf $NORMAL
+cp .vimrc $HOME/.vimrc
+mkdir -p $HOME/.vim/bundle
+git clone https://github.com/VundleVim/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
+vim +PluginInstall +qall
 
 exit 0
